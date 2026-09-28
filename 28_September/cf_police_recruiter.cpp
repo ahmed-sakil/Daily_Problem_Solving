@@ -6,14 +6,21 @@ void solved_by_sakil()
     int n;
     cin >> n;
 
-    long long c=0;
+    long long c=0, p=0;
 
     while(n--)
     {
         int x;
         cin >> x;
+        if(x<0 && p!=0){
+            p--;
+        }else if(x<0){
+            c--;
+        }else{
+            p += x;
+        }
 
-        c+=x;
+        // c+=x;
     }
     if(c<0){
         cout << abs(c) << "\n";
